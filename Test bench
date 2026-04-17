@@ -1,0 +1,24 @@
+module b2e_tb;
+reg [3:0]b;
+wire [3:0]e;
+
+bc2ex b1(b,e);
+initial
+begin
+b=4'b0010;
+#10 b=4'b1001;
+#10 b=4'b0001;
+#10 b=4'b1111;
+#10 b=4'b1100;
+#10 b=4'b0011;
+#10 b=4'b0101;
+#10 b=4'b1101;
+#10 b=4'b0111;
+#10 b=4'b1101;
+#10 b=4'b0110;
+#10 $finish;
+end
+initial
+$display("bcd=%b,ex-3=%b",b,e);
+
+endmodule
