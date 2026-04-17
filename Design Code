@@ -1,0 +1,20 @@
+module bc2ex(b,e);
+input [3:0]b;
+output reg[3:0]e;
+always@(b)
+case(b)
+4'b0000:assign e=b+4'd3;
+4'b0001:assign e=b+4'd3;
+4'b0010:assign e=b+4'd3;
+4'b0011:assign e=b+4'd3;
+4'b0100:assign e=b+4'd3;
+4'b0101:assign e=b+4'd3;
+4'b0110:assign e=b+4'd3;
+4'b0111:assign e=b+4'd3;
+4'b1000:assign e=b+4'd3;
+4'b1001:assign e=b+4'd3;
+default:e=4'bzzzz;
+endcase
+endmodule
+
+
